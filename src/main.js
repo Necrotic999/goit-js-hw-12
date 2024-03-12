@@ -28,7 +28,10 @@ async function onBtnSubmit(e) {
     page = 1;
     inputValue = e.target.elements.photo.value;
     ulEl.innerHTML = "";
-    if (!inputValue.trim()) return;
+    if (!inputValue.trim()) { 
+        hideLoadBtn();
+        return;
+    }
     showLoader();
     hideLoadBtn();
 
