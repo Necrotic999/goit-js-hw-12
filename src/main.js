@@ -49,7 +49,9 @@ async function onBtnSubmit(e) {
             });
         }
         ulEl.insertAdjacentHTML("beforeend", markup);
-        showLoadBtn();
+        if (data.totalHits > 15) { 
+            showLoadBtn();
+        }
     } catch (error) {
         console.log(error);
     } finally { 
